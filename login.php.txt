@@ -1,0 +1,49 @@
+<?php 
+// login.php 
+ 
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    // Retrieve form data 
+    $email = $_POST["email"]; 
+    $password = $_POST["password"]; 
+    $remember = isset($_POST["remember"]) ? $_POST["remember"] : ""; 
+ 
+    // Perform basic validation 
+    if (empty($email) || empty($password)) { 
+        echo "Please fill in all fields."; 
+    } else { 
+        // Example: Check if the email and password are valid 
+        if ($email === "Jimmy@gemil.com" && $password === "password") { 
+            echo "Login successful!"; 
+        } else { 
+            echo "Invalid email or password."; 
+        } 
+    } 
+} 
+?> 
+<?php 
+$email=$_REQUIST['email']; 
+$password=$REQUIST['pass']; 
+ 
+if(isset($_POST['btn1'])) 
+{ 
+ $host="localhost"; 
+ $user="root"; 
+ $password=""; 
+ $dbname="customers"; 
+ 
+ $conn=mysqli_connect($host,$user,$password,$db); 
+ 
+ $insert="insert into customerslist values('email','pass'); 
+ 
+ 
+ mysqli_query($conn,$insert); 
+ 
+  if($conn){ 
+ 
+  echo("your registration is Done"); 
+  }else{ 
+  echo("your registration is faild"); 
+ } 
+ 
+} 
+?>
