@@ -45,6 +45,6 @@ if(isset($_POST['btn1']))
   echo("your registration is faild"); 
  } 
  
-} 
+}  
 
 ?>
